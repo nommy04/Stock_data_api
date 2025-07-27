@@ -55,8 +55,8 @@ Docs: Complete interactive documentation at /
 1) **build-index url**
 
 
-    url=http://127.0.0.1:8000/build-index
-   sample curl-
+  url=http://127.0.0.1:8000/build-index
+  sample curl-
                curl -X 'POST' \
   'http://127.0.0.1:8000/build-index' \
   -H 'accept: application/json' \
@@ -68,9 +68,9 @@ Docs: Complete interactive documentation at /
 
 2) **export data**
 
-   url=http://127.0.0.1:8000/export-data?start_date=2024-06-01&end_date=2024-06-18
+  url=http://127.0.0.1:8000/export-data?start_date=2024-06-01&end_date=2024-06-18
    
-   sample curl=
+  sample curl=
            curl -X 'POST' \
   'http://127.0.0.1:8000/export-data?start_date=2024-06-01&end_date=2024-06-18' \
   -H 'accept: application/json' \
@@ -79,22 +79,22 @@ Docs: Complete interactive documentation at /
 
 3) **index performance for a range of data**
 
- url=  http://127.0.0.1:8000/index-performance?start_date=2024-06-01&end_date=2024-07-12
+  url=  http://127.0.0.1:8000/index-performance?start_date=2024-06-01&end_date=2024-07-12
 
-   sample Curl-
+  sample Curl-
    curl -X 'GET' \
   'http://127.0.0.1:8000/index-performance?start_date=2024-06-01&end_date=2024-07-12' \
   -H 'accept: application/json
 
 4) **index composition at a particular date** **
-   url= http://127.0.0.1:8000/index-composition?date=2024-06-03
-   sample curl-
+  url= http://127.0.0.1:8000/index-composition?date=2024-06-03
+  sample curl-
    curl -X 'GET' \
   'http://127.0.0.1:8000/index-composition?date=2024-06-03' \
   -H 'accept: application/json' 
 5) **composition changes as per dates**
-   url= http://127.0.0.1:8000/composition-changes?start_date=2024-06-01&end_date=2024-06-18
-   sample curl=
+  url= http://127.0.0.1:8000/composition-changes?start_date=2024-06-01&end_date=2024-06-18
+  sample curl=
    curl -X 'GET' \
   'http://127.0.0.1:8000/composition-changes?start_date=2024-06-01&end_date=2024-06-18' \
   -H 'accept: application/json'
