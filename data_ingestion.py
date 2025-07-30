@@ -36,7 +36,7 @@ def fetch_stock_data(ticker, date):
         return None
 
 # Step 3: Build top 100 list for a given date
-def get_top_100_by_market_cap(tickers, date):
+def get_data_by_market_cap(tickers, date):
     results = []
     for i, ticker in enumerate(tickers):
         data = fetch_stock_data(ticker, date)
@@ -63,10 +63,13 @@ def ingest_for_date_range(start_date: str, end_date: str):
     
     while current_date <= end_date:
         print(f"\nFetching data for {current_date.date()}")
-        df = get_top_100_by_market_cap(tickers, current_date.strftime('%Y-%m-%d'))
+        df = get_data_by_market_cap(tickers, current_date.strftime('%Y-%m-%d'))
         save_to_sqlite(df)
         current_date += timedelta(days=1)
 
 # ===== Run It =====
 if __name__ == "__main__":
-    ingest_for_date_range("2024-07-18", "2024-07-25")
+    #can use dt.datetime.today and make it an automatic process
+    # ingest_for_date_range((datetime.today()-timedelta(days=1)).strftime('%Y-%m-%d')
+    #                       ,(datetime.today()).strftime('%Y-%m-%d'))
+    ingest_for_date_range("2024-06-18", "2024-06-25")

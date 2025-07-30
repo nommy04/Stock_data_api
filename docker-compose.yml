@@ -18,3 +18,13 @@ services:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+
+  cronjob:
+    build:
+      context: .
+      dockerfile: cron/Dockerfile
+    volumes:
+      - ./index_data.db:/app/index_data.db
+    depends_on:
+      - redis
+    

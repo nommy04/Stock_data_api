@@ -1,4 +1,4 @@
-import sqlite3
+
 #updates the daily_index_composition table by pulling data from the raw_stock_data table
 def update_index_composition(conn, target_date: str):
     
